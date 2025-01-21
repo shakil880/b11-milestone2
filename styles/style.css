@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+
+body {
+    font-family: "Quicksand", serif;
+    background: rgb(245, 245, 245);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+
+}
+
+.horizontal-line {
+  border: 1px solid rgb(254, 163, 1);
+  visibility: hidden;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-links .link-1 {
+  color: orange;
+}
+
+.nav-links .link-2 {
+  color: skyblue;
+}
+
+.nav-links .link-3 {
+  color: rgb(5, 212, 223);
+}
+
+.nav-links .link-4 {
+  color: rgb(93, 88, 239);
+}
+
+.nav-links a {
+  padding-left: 50px;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+
+.contact {
+  border-radius: 12px;
+  padding: 10px 25px;
+  background: rgb(254, 163, 1);
+  color: white;
+}
+
+.banner {
+  /* background-color: gray; */
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 28px;
+}
+
+.description .des-1 {
+  display: block;
+  color: rgb(254, 163, 1);
+}
+
+.description .des-2 {
+  color: rgb(1, 172, 253)
+}
+
+.banner-image img{
+  height: 100%;
+}
+
+#curriculum {
+  background-image: url(/assets/bg.png);
+  text-align: center;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.cur-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.cur-cards>div {
+  width: 30%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile screen max 576 px */
+@media (max-width: 576px) {
+  .logo>h1, .nav-links {
+    visibility: hidden;
+  }
+
+  .hamburger-menu {
+    display: block;
+    font-size: 44px;
+  }
+
+  .contact {
+    display: none;
+  }
+
+  .banner {
+    flex-direction: column-reverse;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .banner img {
+    width: 100%;
+  }
+
+  .horizontal-line {
+    border: 1px solid rgb(254, 163, 1);
+    visibility: visible;
+}
+
+}
