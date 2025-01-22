@@ -32,6 +32,42 @@ body {
   visibility: hidden;
 }
 
+
+ 
+
+
+.marquee {
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    width: 100%;
+    font-size: 20px;
+    color: white;
+    background: rgb(254, 163, 1);
+    animation: scroll-left 20s linear infinite;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(100%); /* Start fully to the right */
+    }
+    to {
+        transform: translateX(-100%); /* End fully to the left */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .logo {
   display: flex;
   align-items: center;
@@ -192,13 +228,26 @@ body {
   text-align: center;
 }
 
+.directions i{
+  margin: 5px;
+}
+
 .directions > i {
   padding: 20px;
   /* border: 2px solid red; */
   border-radius: 50%;
   background-color: rgb(254, 163, 1);
   color: white;
+
+  transition: transform 0.3s ease, color 0.3s ease;
 }
+
+
+.directions > i:hover {
+    color: #2e2c2c; /* Change the color on hover */
+    transform: scale(1.2); /* Slightly increase size */
+}
+
 
 
 #stories {
@@ -217,6 +266,8 @@ body {
   align-items: center;
 
   height: 120vh;
+
+  padding-bottom: 80px;
 }
 
 .left {
@@ -334,16 +385,17 @@ footer {
   color: white;
 
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   height: 50vh;
+  padding-top: 80px;
   
 } 
 
 
-/* .footer-section div {
-  margin-top: 100px;
-} */
+
+
 
 .kids-edu {
   /* background-color: yellow; */
@@ -355,6 +407,7 @@ footer {
   flex-direction: column;
   justify-content: start;
   align-items: start;
+  gap: 20px;
 }
 
 
@@ -379,6 +432,7 @@ footer {
   /* background-color: yellow; */
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
 
